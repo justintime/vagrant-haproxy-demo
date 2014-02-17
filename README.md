@@ -37,11 +37,6 @@ This is the toolset I used to present on load balancers at University of Nebrask
 10.  To remove the VM's from your hard drive, run ``` vagrant destroy web1 web2 haproxy ```
 11.  If you wish to remove the cached image file from which these machines were created, run ``` vagrant box remove precise32 ```
 
-
-
-
-http://localhost:8080/haproxy?stats
-
 # Reference material
 * [Vagrant](http://vagrantup.com)
 * [VirtualBox](http://www.virtualbox.org)
