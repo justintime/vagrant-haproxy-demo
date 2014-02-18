@@ -26,8 +26,8 @@ This is the toolset I used to present on load balancers at University of Nebrask
 2.  In terminal #1, run ``` vagrant up haproxy && vagrant ssh haproxy ```
 3.  In terminal #2, run ``` vagrant up web1 && vagrant ssh web1 ```
 4.  In terminal #3, run ``` vagrant up web2 && vagrant ssh web2 ```
-5.  Open up http://localhost:8080/haproxy?stats in your host's browser.  This is the HAProxy admin interface.
-6.  Open up http://localhost:8083/ in your host's browser.  This is the load balanced interface to the two web servers.
+5.  Open up [http://localhost:8080/haproxy?stat](http://localhost:8080/haproxy?stats) in your host's browser.  This is the HAProxy admin interface.
+6.  Open up [http://localhost:8081/](http://localhost:8081/) in your host's browser.  This is the load balanced interface to the two web servers.
 5.  To see the Apache access logs on web1 and web2, run ``` sudo tail -f /var/log/apache2/access.log ```  If you'd like to filter out the "pings" from the load balancer, run ``` sudo tail -f /var/log/apache2/access.log | grep -v OPTIONS ```
 6.  To stop Apache on one of the webservers to simulate an outage, run ``` sudo service apache2 stop ```  To start it again, run ``` sudo service apache2 start ```
 7.  To make changes to haproxy, edit the config file with ``` sudo nano /etc/haproxy/haproxy.cfg ```  When you want to apply the changes, run ``` sudo service haproxy reload ```  If you break things and want to reset back, just run ``` sudo cp /etc/haproxy/haproxy.cfg.orig /etc/haproxy/haproxy.cfg && sudo service haproxy reload ```
