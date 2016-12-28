@@ -26,7 +26,7 @@ This is the toolset I used to present on load balancers at University of Nebrask
 2.  In terminal #1, run ``` vagrant up haproxy && vagrant ssh haproxy ```
 3.  In terminal #2, run ``` vagrant up web1 && vagrant ssh web1 ```
 4.  In terminal #3, run ``` vagrant up web2 && vagrant ssh web2 ```
-5.  Open up [http://localhost:8080/haproxy?stat](http://localhost:8080/haproxy?stats) in your host's browser.  This is the HAProxy admin interface.
+5.  Open up [http://localhost:8080/haproxy?stats](http://localhost:8080/haproxy?stats) in your host's browser.  This is the HAProxy admin interface.
 6.  Open up [http://localhost:8081/](http://localhost:8081/) in your host's browser.  This is the load balanced interface to the two web servers.  **Note** this is port forwarded via your actual host, and will be accessible via your externally accessible IP address - you can access test the load balancer from another workstation if you wish.
 7.  Open up [http://172.28.33.11/](http://172.28.33.11/) in a browser to see if web1's Apache is working.
 8.  Open up [http://172.28.33.12/](http://172.28.33.12/) in a browser to see if web2's Apache is working.
